@@ -113,13 +113,22 @@
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Api\ErrorServices\ParameterChecker.cs" />
+    <Compile Include="Api\MessageServices\MessageSender.cs" />
+    <Compile Include="Api\MessageServices\MessageHelper.cs" />
+    <Compile Include="Enums\HttpMessageType.cs" />
+    <Compile Include="Enums\HttpMethod.cs" />
+    <Compile Include="Enums\HttpResponseFormat.cs" />
+    <Compile Include="Interfaces\ISimpleMessage.cs" />
+    <Compile Include="Interfaces\ISimpleResponse.cs" />
+    <Compile Include="Interfaces\ISimpleRestClient.cs" />
+    <Compile Include="Models\SimpleMessage.cs" />
+    <Compile Include="Models\SimpleResponse.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Models\SimpleRestClient.cs" />
     <Content Include="Properties\SimpleRest.rd.xml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Api\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>
