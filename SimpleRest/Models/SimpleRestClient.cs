@@ -15,7 +15,7 @@ namespace SimpleRest {
         public Dictionary<string, string> Headers { get; set; }
 
         public async Task<ISimpleResponse<T>> SendMessageAsync<T>(ISimpleMessage restMessageToSend) {
-            return await MessageSender.SendMessage<T>(rest: this, message: restMessageToSend);
+            return await MessageSender.SendMessage<T>(client: this, message: restMessageToSend);
         }
     }
 }
