@@ -9,6 +9,7 @@ namespace SimpleRest {
         HttpResponseFormat ResponseFormat { get; set; }
         string BaseUrl { get; set; }
         Dictionary<string, string> Headers { get; set; }
+        Dictionary<string, string> GlobalMessageParameters { get; set; }
         Task<ISimpleResponse<T>> SendMessageAsync<T>(ISimpleMessage simpleMessage);
     }
 }
