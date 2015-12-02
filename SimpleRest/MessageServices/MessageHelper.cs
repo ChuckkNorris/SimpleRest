@@ -12,8 +12,8 @@ namespace SimpleRest.Api {
         /// 
         /// </summary>
         /// <param name="baseUrl">"https://api.site.com"</param>
-        /// <param name="endPointPath">"Person/Dogs"</param>
-        /// <param name="queryStringParameters"></param>
+        /// <param name="endPointPath">"Person/Login"</param>
+        /// <param name="queryStringParameters">["location"]="Denver"</param>
         /// <returns></returns>
         public static async Task<Uri> BuildUri(string baseUrl, string endPointPath, Dictionary<string,string> queryStringParameters) {
             string fixedBaseUrl = baseUrl.TrimEnd('/') + "/";
