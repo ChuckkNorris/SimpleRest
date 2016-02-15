@@ -19,7 +19,7 @@ namespace SimpleRest.Api {
             string fixedBaseUrl = baseUrl.TrimEnd('/') + "/";
             string fixedEndPoint = endPointPath.TrimStart('/');
             var builder = new UriBuilder(fixedBaseUrl + fixedEndPoint);
-            builder.Port = -1;
+       //     builder.Port = -1;
             HttpFormUrlEncodedContent encodedQueryString = new HttpFormUrlEncodedContent(queryStringParameters);
             builder.Query = await encodedQueryString.ReadAsStringAsync();
             return builder.Uri;

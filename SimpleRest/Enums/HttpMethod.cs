@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 namespace SimpleRest {
     public enum HttpMethod {
         Get = 0,
-        Post = 1
+        Post = 1,
+        Put = 3,
+        Delete = 4
     }
 }

@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace SimpleRest {
-    public  class SimpleMessage : ISimpleMessage {
+    public  class SimpleMessage {
        
         /// <summary>
         /// Constructs a message to be sent by the SimpleRestClient
@@ -38,5 +38,7 @@ namespace SimpleRest {
         /// e.g. "account/login"
         /// </summary>
         public string EndPointPath { get; set; }
+
+        public object Content { get; set; }
     }
 }

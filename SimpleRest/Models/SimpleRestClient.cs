@@ -9,7 +9,7 @@ namespace SimpleRest {
     /// <summary>
     /// Rest Client used for controlling response/request settings
     /// </summary>
-    public class SimpleRestClient : ISimpleRestClient {
+    public class SimpleRestClient {
         
         /// <summary>
         /// Allows you to send Requests/Responses to/from a Restful API
@@ -52,8 +52,8 @@ namespace SimpleRest {
         /// <typeparam name="T"></typeparam>
         /// <param name="restMessageToSend"></param>
         /// <returns></returns>
-        public async Task<ISimpleResponse<T>> SendMessageAsync<T>(ISimpleMessage restMessageToSend) {
-            return await MessageSender.SendMessage<T>(client: this, message: restMessageToSend);
+        public async Task<SimpleResponse<T>> SendMessageAsync<T>(SimpleMessage restMessageToSend) {
+            return await MessageSender.SendMessage<T>(simpleClient: this, simpleMessage: restMessageToSend);
         }
     }
 }

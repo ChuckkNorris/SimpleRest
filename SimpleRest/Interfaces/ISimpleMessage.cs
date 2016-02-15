@@ -10,5 +10,6 @@ namespace SimpleRest {
         HttpMessageType MessageType { get; set; }
         Dictionary<string, string> Parameters { get; set; }
         string EndPointPath { get; set; }
+        string Content { get; set; }
     }
 }
